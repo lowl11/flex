@@ -3,13 +3,15 @@ package flex
 import "reflect"
 
 type RType interface {
+	Reset(t reflect.Type)
+	Unwrap() reflect.Type
+	Type() reflect.Type
 	IsPrimitive() bool
 	IsReference() bool
 	IsFunc() bool
 	IsTime() bool
 	IsStruct() bool
 	IsPtr() bool
-	Unwrap() reflect.Type
 }
 
 type RValue interface {
