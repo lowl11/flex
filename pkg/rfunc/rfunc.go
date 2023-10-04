@@ -2,7 +2,7 @@ package rfunc
 
 import (
 	"errors"
-	"flex/pkg/rtype"
+	"github.com/lowl11/flex/pkg/rtype"
 	"reflect"
 )
 

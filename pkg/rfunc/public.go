@@ -2,7 +2,7 @@ package rfunc
 
 import (
 	"errors"
-	"flex/internal/th"
+	"github.com/lowl11/flex/internal/th"
 	"reflect"
 )
 

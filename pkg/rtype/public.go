@@ -1,7 +1,7 @@
 package rtype
 
 import (
-	"flex/internal/th"
+	"github.com/lowl11/flex/internal/th"
 	"reflect"
 )
 

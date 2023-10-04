@@ -2,9 +2,9 @@ package rstruct
 
 import (
 	"errors"
-	"flex/internal/th"
-	"flex/internal/vh"
-	"flex/pkg/rtype"
+	"github.com/lowl11/flex/internal/th"
+	"github.com/lowl11/flex/internal/vh"
+	"github.com/lowl11/flex/pkg/rtype"
 	"reflect"
 )
 

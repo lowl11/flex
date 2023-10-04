@@ -1,12 +1,12 @@
 package flex
 
 import (
-	"flex/pkg/rfield"
-	"flex/pkg/rfunc"
-	"flex/pkg/robject"
-	"flex/pkg/rstruct"
-	"flex/pkg/rtype"
-	"flex/pkg/rvalue"
+	"github.com/lowl11/flex/pkg/rfield"
+	"github.com/lowl11/flex/pkg/rfunc"
+	"github.com/lowl11/flex/pkg/robject"
+	"github.com/lowl11/flex/pkg/rstruct"
+	"github.com/lowl11/flex/pkg/rtype"
+	"github.com/lowl11/flex/pkg/rvalue"
 	"reflect"
 )
 
