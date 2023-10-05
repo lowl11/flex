@@ -44,5 +44,7 @@ type RStruct interface {
 }
 
 type RField interface {
+	IsPublic() bool
+	Type() reflect.Type
 	Tag(tagName string) []string
 }
