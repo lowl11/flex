@@ -15,7 +15,10 @@ type RType interface {
 }
 
 type RValue interface {
-	//
+	Unwrap() reflect.Value
+	Reset(newValue reflect.Value)
+	Value() any
+	UnwrappedValue() any
 }
 
 type RObject interface {
