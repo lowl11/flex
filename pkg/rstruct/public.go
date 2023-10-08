@@ -42,6 +42,16 @@ func (s RStruct) FieldsRow() []reflect.StructField {
 	return fields
 }
 
+func (s RStruct) FieldByType(t reflect.Type) any {
+	fields := s.Fields()
+	for index, field := range fields {
+		if field.Type == t {
+			return s.v.Field(index).Interface()
+		}
+	}
+	return nil
+}
+
 func (s RStruct) MethodCount() int {
 	return s.t.NumMethod()
 }
