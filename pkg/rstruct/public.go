@@ -66,5 +66,18 @@ func (s RStruct) FieldValueByTag(tagName, tagValue string) any {
 			return s.v.Field(i).Interface()
 		}
 	}
+
+	// still not found? try go to parent objects
+	for i := 0; i < s.t.NumField(); i++ {
+		kind := rtype.New(s.t.Field(i).Type)
+		if kind.IsPrimitive() || kind.IsTime() {
+			continue
+		}
+
+		searchValue := New(s.v.Field(i).Interface()).FieldValueByTag(tagName, tagValue)
+		if searchValue != nil {
+			return searchValue
+		}
+	}
 	return nil
 }
