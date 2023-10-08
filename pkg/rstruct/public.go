@@ -54,3 +54,17 @@ func (s RStruct) Methods() []reflect.Method {
 	}
 	return methods
 }
+
+func (s RStruct) FieldValueByTag(tagName, tagValue string) any {
+	for i := 0; i < s.t.NumField(); i++ {
+		searchTagValue := s.t.Field(i).Tag.Get(tagName)
+		if len(searchTagValue) == 0 {
+			continue
+		}
+
+		if searchTagValue == tagValue {
+			return s.v.Field(i).Interface()
+		}
+	}
+	return nil
+}

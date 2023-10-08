@@ -41,6 +41,7 @@ type RStruct interface {
 	FieldsRow() []reflect.StructField
 	MethodCount() int
 	Methods() []reflect.Method
+	FieldValueByTag(tagName, tagValue string) any
 }
 
 type RField interface {
