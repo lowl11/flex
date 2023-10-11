@@ -47,3 +47,7 @@ func (t *RType) IsPtr() bool {
 func (t *RType) Unwrap() reflect.Type {
 	return th.Unwrap(t.reflectType)
 }
+
+func (t *RType) IsInterface() bool {
+	return t.reflectType.Kind() == reflect.Interface
+}

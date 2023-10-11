@@ -12,6 +12,7 @@ type RType interface {
 	IsTime() bool
 	IsStruct() bool
 	IsPtr() bool
+	IsInterface() bool
 }
 
 type RValue interface {
