@@ -40,6 +40,10 @@ func (t *RType) IsTime() bool {
 	return t.reflectType.String() == "time.Time"
 }
 
+func (t *RType) IsUUID() bool {
+	return t.reflectType.String() == "uuid.UUID"
+}
+
 func (t *RType) IsPtr() bool {
 	return t.reflectType.Kind() == reflect.Ptr
 }
