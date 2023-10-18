@@ -80,7 +80,7 @@ func (s RStruct) FieldValueByTag(tagName, tagValue string) any {
 	// still not found? try go to parent objects
 	for i := 0; i < s.t.NumField(); i++ {
 		kind := rtype.New(s.t.Field(i).Type)
-		if kind.IsPrimitive() || kind.IsTime() || !kind.IsUUID() {
+		if kind.IsPrimitive() || kind.IsTime() || kind.IsUUID() {
 			continue
 		}
 
