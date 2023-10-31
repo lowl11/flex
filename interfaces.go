@@ -10,6 +10,7 @@ type RType interface {
 	IsReference() bool
 	IsFunc() bool
 	IsTime() bool
+	IsUUID() bool
 	IsStruct() bool
 	IsPtr() bool
 	IsInterface() bool
