@@ -41,7 +41,7 @@ func (t *RType) IsTime() bool {
 }
 
 func (t *RType) IsUUID() bool {
-	return t.reflectType.String() == "uuid.UUID"
+	return t.Unwrap().String() == "uuid.UUID"
 }
 
 func (t *RType) IsPtr() bool {
