@@ -14,6 +14,8 @@ type RType interface {
 	IsStruct() bool
 	IsPtr() bool
 	IsInterface() bool
+	IsSlice() bool
+	IsBytes() bool
 }
 
 type RValue interface {

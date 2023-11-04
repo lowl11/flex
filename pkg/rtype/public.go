@@ -55,3 +55,15 @@ func (t *RType) Unwrap() reflect.Type {
 func (t *RType) IsInterface() bool {
 	return t.reflectType.Kind() == reflect.Interface
 }
+
+func (t *RType) IsSlice() bool {
+	return t.reflectType.Kind() == reflect.Slice || t.reflectType.Kind() == reflect.Array
+}
+
+func (t *RType) IsBytes() bool {
+	if !t.IsSlice() {
+		return false
+	}
+
+	return t.reflectType.Elem().Kind() == reflect.Uint8
+}
